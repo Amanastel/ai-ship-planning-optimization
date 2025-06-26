@@ -1,0 +1,56 @@
+{
+  "name": "ship-planning-ai",
+  "version": "1.0.0",
+  "description": "AI-Powered Ship Planning & Optimization System - Backend Service",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "docker:build": "docker build -t ship-planning-ai .",
+    "docker:run": "docker run -p 3000:3000 ship-planning-ai"
+  },
+  "keywords": [
+    "ship-planning",
+    "ai",
+    "optimization",
+    "maritime",
+    "backend",
+    "express",
+    "mongodb",
+    "tensorflow"
+  ],
+  "author": "Aman Kumar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "bcryptjs": "^3.0.2",
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^7.0.3",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.3",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.1",
+    "supertest": "^7.1.1"
+  }
+}

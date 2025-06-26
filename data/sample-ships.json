@@ -1,0 +1,74 @@
+[
+  {
+    "shipId": "DEMO-001",
+    "name": "Atlantic Explorer",
+    "engineType": "diesel",
+    "capacity": 45000,
+    "maxSpeed": 22,
+    "fuelTankCapacity": 3200,
+    "specifications": {
+      "length": 230,
+      "width": 35,
+      "draft": 12,
+      "grossTonnage": 52000,
+      "deadweight": 48000
+    },
+    "owner": "Global Shipping Inc",
+    "yearBuilt": 2018,
+    "status": "active",
+    "currentLocation": {
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "port": "New York Port",
+      "timestamp": "2025-06-27T10:00:00Z"
+    }
+  },
+  {
+    "shipId": "DEMO-002",
+    "name": "Pacific Voyager",
+    "engineType": "hybrid",
+    "capacity": 38000,
+    "maxSpeed": 24,
+    "fuelTankCapacity": 2800,
+    "specifications": {
+      "length": 215,
+      "width": 32,
+      "draft": 11,
+      "grossTonnage": 44000,
+      "deadweight": 40000
+    },
+    "owner": "EcoShip Solutions",
+    "yearBuilt": 2021,
+    "status": "active",
+    "currentLocation": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "port": "Los Angeles Port",
+      "timestamp": "2025-06-27T10:00:00Z"
+    }
+  },
+  {
+    "shipId": "DEMO-003",
+    "name": "Nordic Star",
+    "engineType": "electric",
+    "capacity": 25000,
+    "maxSpeed": 20,
+    "fuelTankCapacity": 1800,
+    "specifications": {
+      "length": 180,
+      "width": 28,
+      "draft": 10,
+      "grossTonnage": 28000,
+      "deadweight": 26000
+    },
+    "owner": "Nordic Green Fleet",
+    "yearBuilt": 2023,
+    "status": "active",
+    "currentLocation": {
+      "latitude": 59.9139,
+      "longitude": 10.7522,
+      "port": "Oslo Port",
+      "timestamp": "2025-06-27T10:00:00Z"
+    }
+  }
+]
