@@ -61,7 +61,7 @@ redis_data/
 uploads/
 
 # AI model files (if storing locally)
-models/
+ai-models/
 *.h5
 *.pb
 
