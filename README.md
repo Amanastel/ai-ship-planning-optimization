@@ -1,6 +1,6 @@
 # 🚢 AI-Powered Ship Planning & Optimization System
 
-[![CI/CD Pipeline](https://github.com/amanastel/ai-ship-planning-optimization/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/amanastel/ai-ship-planning-optimization/actions)
+[![CI/CD Pipeline](https://github.com/Amanastel/ai-ship-planning-optimization/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/Amanastel/ai-ship-planning-optimization/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://www.docker.com/)
 
@@ -49,7 +49,7 @@ This system serves as the **"Planning Brain"** for smart shipping operations, pr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ai-ship-planning-optimization.git
+   git clone https://github.com/Amanastel/ai-ship-planning-optimization.git
    cd ai-ship-planning-optimization
    ```
 
@@ -361,12 +361,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Express.js for the robust web framework
 - Docker for containerization technology
 
-## 📞 **Contact**
-
-**Developer**: Aman Kumar  
-**Email**: [dj@skycladventures.com](mailto:dj@skycladventures.com)  
-**Project**: AI-Powered Ship Planning & Optimization System
-
----
 
 **Built with ❤️ for the maritime industry**
