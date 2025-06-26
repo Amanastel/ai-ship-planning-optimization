@@ -74,12 +74,24 @@ jobs:
       uses: docker/setup-buildx-action@v3
     
     - name: Login to Docker Hub
+      if: ${{ secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != '' }}
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     
+    - name: Build Docker image (local only)
+      if: ${{ secrets.DOCKER_USERNAME == '' || secrets.DOCKER_PASSWORD == '' }}
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: false
+        tags: ship-planning-ai:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+    
     - name: Build and push Docker image
+      if: ${{ secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != '' }}
       uses: docker/build-push-action@v5
       with:
         context: .
@@ -90,30 +102,32 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-  # Deploy to Staging
+  # Deploy to Staging (only if Docker secrets are available)
   deploy-staging:
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != ''
     environment: staging
     
     steps:
     - name: Deploy to staging
       run: |
         echo "Deploying to staging environment"
+        echo "Docker image: ${{ secrets.DOCKER_USERNAME }}/ship-planning-ai:${{ github.sha }}"
         # Add your deployment commands here
         # Example: kubectl apply -f k8s/staging/
     
-  # Deploy to Production
+  # Deploy to Production (only if Docker secrets are available)
   deploy-production:
     runs-on: ubuntu-latest
     needs: deploy-staging
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != ''
     environment: production
     
     steps:
     - name: Deploy to production
       run: |
         echo "Deploying to production environment"
+        echo "Docker image: ${{ secrets.DOCKER_USERNAME }}/ship-planning-ai:${{ github.sha }}"
         # Add your production deployment commands here
         # Example: kubectl apply -f k8s/production/
