@@ -350,7 +350,36 @@ For handling real-time sensor data from 500+ vessels:
 - **Load Balancing**: Multiple application instances behind load balancer
 - **Monitoring**: Prometheus + Grafana for metrics and alerting
 
-## 📄 **License**
+## � **CI/CD Configuration**
+
+The project includes a complete CI/CD pipeline using GitHub Actions. The workflow automatically:
+
+- ✅ Runs tests on Node.js 18.x and 20.x
+- ✅ Performs linting and code quality checks
+- ✅ Builds Docker images
+- 🔒 Pushes to Docker Hub (when configured)
+- 🚀 Deploys to staging/production (when configured)
+
+### Setting Up Docker Hub Deployment (Optional)
+
+To enable Docker Hub deployment, add these secrets to your GitHub repository:
+
+1. Go to **Settings** → **Secrets and variables** → **Actions**
+2. Add the following repository secrets:
+
+```bash
+DOCKER_USERNAME=your-docker-hub-username
+DOCKER_PASSWORD=your-docker-hub-password-or-token
+```
+
+**Security Recommendation**: Use a Docker Hub Access Token instead of your password:
+1. Go to [Docker Hub Security Settings](https://hub.docker.com/settings/security)
+2. Generate a new Access Token
+3. Use the token as `DOCKER_PASSWORD`
+
+Without these secrets, the CI/CD pipeline will still build and test the application, but skip Docker Hub deployment.
+
+## �📄 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
