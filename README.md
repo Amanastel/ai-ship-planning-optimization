@@ -1,6 +1,5 @@
 # 🚢 AI-Powered Ship Planning & Optimization System
 
-[![CI/CD Pipeline](https://github.com/Amanastesl/ai-ship-planning-optimization/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/Amanastesl/ai-ship-planning-optimization/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://www.docker.com/)
 
