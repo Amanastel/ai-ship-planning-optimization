@@ -49,8 +49,8 @@ This system serves as the **"Planning Brain"** for smart shipping operations, pr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/username/ship-planning-ai.git
-   cd ship-planning-ai
+   git clone https://github.com/Amanastel/ai-ship-planning-optimization.git
+   cd ai-ship-planning-optimization
    ```
 
 2. **Install dependencies**
