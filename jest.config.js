@@ -9,6 +9,8 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   setupFilesAfterEnv: ['<rootDir>/tests/setup.js'],
-  testTimeout: 30000,
-  verbose: true
+  testTimeout: 10000,
+  verbose: false,
+  forceExit: true,
+  detectOpenHandles: false
 };
