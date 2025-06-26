@@ -361,12 +361,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Express.js for the robust web framework
 - Docker for containerization technology
 
-## 📞 **Contact**
-
-**Developer**: Aman Kumar  
-**Email**: [dj@skycladventures.com](mailto:dj@skycladventures.com)  
-**Project**: AI-Powered Ship Planning & Optimization System
-
----
 
 **Built with ❤️ for the maritime industry**
